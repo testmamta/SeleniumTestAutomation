@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="DemoQAUITests" verbose="1" parallel="tests" thread-count="3">
+    <test name="ChromeRemoteTest">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="runMode" value="remote"/>
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+    <test name="FirefoxRemoteTest">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="runMode" value="remote"/>
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+    <test name="EdgeRemoteTest">
+        <parameter name="browser" value="edge"/>
+        <parameter name="runMode" value="remote"/>
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+    <listeners>
+    <listener class-name="listeners.TestReportListener"/>
+</listeners>
+</suite>
